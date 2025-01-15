@@ -53,7 +53,6 @@ class _MyAppState extends State<MyApp> {
               child: Text(
                 "Current batch number: $batchIconNumber",
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline4,
               ),
             ),
             TextField(
@@ -127,7 +126,7 @@ class _MyAppState extends State<MyApp> {
               child: Text(
                 "Current Icon Name: $currentIconName",
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline4,
+       
               ),
             ),
             SwitchListTile(

@@ -4,31 +4,33 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral() 
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.1'
+        classpath 'com.android.tools.build:gradle:8.2.1' 
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral() 
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33 
+    namespace "io.github.tastelessjolt.flutterdynamicicon"
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    lintOptions {
-        disable 'InvalidPackage'
+
+    lint {
+        disable 'InvalidPackage' // Mantém a configuração de lint ajustada
     }
 }
